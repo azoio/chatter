@@ -1,0 +1,86 @@
+body {
+    font: 300 20px/1.5em "Helvetica Neue", Helvetica, sans-serif-thin, Arial, "Lucida Grande", sans-serif;
+    color: #302f2f;
+    background: #fff;
+}
+
+.wrapper {
+    position: relative;
+    max-width: 400px;
+    margin: 0 auto;
+    padding-bottom: 40px;
+}
+
+.indent {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: #ff508b;;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+/* chat */
+blockquote.chat {
+    max-width: 420px;
+    clear: both;
+    margin: 10px auto;
+}
+
+.chat > p {
+    margin: 10px 0 20px;
+    border-radius: 1em;
+    padding: 11px 25px;
+    background: #ffdeed;
+    max-width: 75%;
+    clear: both;
+    position: relative;
+    font: 300 18px/1.2em "Helvetica Neue", Helvetica, sans-serif-thin, Arial, "Lucida Grande", sans-serif;
+}
+
+.chat > p.them {
+    float: left;
+}
+
+.chat > p.them::after {
+    content: "";
+    position: absolute;
+    left: -10px;
+    bottom: 0;
+    width: 10px;
+    height: 20px;
+    border-right: 9px solid #ffdeed;
+    border-bottom-right-radius: 16px 8px;
+}
+
+.chat > p.me {
+    float: right;
+    background-color: #1289fe;
+    color: white;
+}
+
+.chat > p.me::after {
+    content: "";
+    position: absolute;
+    right: -0.44em;
+    bottom: 0;
+    width: 0.5em;
+    height: 1em;
+    border-left: 0.3em solid #1289fe;
+    border-bottom-left-radius: 1em 0.5em;
+}
+
+.chat > p.them.head {
+    background: #90a5de;
+    color: #fff;
+    font-weight: bold;
+}
+
+.chat > p.them.head::after {
+    border-color: #90a5de;
+}
