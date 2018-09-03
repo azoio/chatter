@@ -23,20 +23,28 @@
         }
         .container {
             height: 100%;
-            padding-bottom: 3rem;
+            padding-bottom: 4rem;
         }
 
         .tab-content {
             padding-top: 1rem;
             height: 100%;
         }
-        #result {
+        #result, #html {
             height: 100%;
         }
         #result iframe {
             height: 100%;
             width: 100%;
             border: 0;
+        }
+        #html pre {
+            height: 100%;
+            overflow: auto;
+            width: 100%;
+            padding: .375rem .75rem;
+            border: 1px solid #ced4da;
+            border-radius: .25rem;
         }
     </style>
 </head>
@@ -81,11 +89,8 @@
             </form>
         </div>
 
-        <div class="tab-pane fade"
-             id="html" role="tabpanel" aria-labelledby="html-tab">
-            <div class="form-group">
-                <textarea class="form-control" rows="10" autofocus><?= htmlspecialchars($this->result); ?></textarea>
-            </div>
+        <div class="tab-pane fade" id="html" role="tabpanel" aria-labelledby="html-tab">
+            <pre class="prettyprint lang-html"><?= htmlspecialchars($this->result); ?></pre>
         </div>
 
         <div class="tab-pane fade <?= !empty($this->result) ? 'show active' : ''; ?>"
@@ -97,5 +102,6 @@
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
 </body>
 </html>
