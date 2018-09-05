@@ -1,5 +1,5 @@
-application: azoio-apps
-module: chatter
+application: {YOUR APP}
+module: {YOUR MODULE NAME}
 
 version: 1-0-0
 
@@ -18,3 +18,7 @@ handlers:
 
 - url: /.*
   script: index.php
+
+env_variables:
+  RECAPTCHA_SITE_KEY:
+  RECAPTCHA_SECRET_KEY:

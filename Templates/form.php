@@ -57,6 +57,9 @@
 </nav>
 
 <main role="main" class="container">
+    <? if (!empty($this->errorMsg)) : ?>
+        <div class="alert alert-danger" role="alert"><?= htmlspecialchars($this->errorMsg); ?></div>
+    <? endif; ?>
     <ul class="nav nav-tabs" id="crosslinkTab" role="tablist">
         <li class="nav-item">
             <a class="nav-link <?= empty($this->result) ? 'active' : ''; ?>"
@@ -84,6 +87,9 @@
                               rows="10"><?= htmlspecialchars($this->source); ?></textarea>
                 </div>
                 <div class="form-group">
+                    <div class="g-recaptcha" data-sitekey="<?= $this->reCaptchaSiteKey ?>"></div>
+                </div>
+                <div class="form-group">
                     <input type="submit" class="btn btn-primary" onClick="this.form.submit(); this.disabled=true; this.value='Sending…';" value="Create">
                 </div>
             </form>
@@ -102,6 +108,7 @@
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+<script src='https://www.google.com/recaptcha/api.js'></script>
 <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
 </body>
 </html>

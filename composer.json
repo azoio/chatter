@@ -9,5 +9,8 @@
     "platform": {
       "php": "5.5"
     }
+  },
+  "require": {
+    "google/recaptcha": "^1.2"
   }
 }
